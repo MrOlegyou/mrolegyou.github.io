@@ -1,0 +1,108 @@
+header {
+	width: 100%;
+	background-color: palegreen;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 25px;
+	padding-bottom: 25px;	
+	box-shadow: 0px 0px 10px gray;
+	margin-bottom: 75px;
+}
+
+.head_link{
+	font-size: 50px;
+	margin-left: 100px;
+	text-decoration: none;
+	color: green;
+}
+
+.head_link:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+.head_links{
+	padding-top: 45px;
+	margin-right: 75px;
+}
+
+.head_logo{
+	margin-left: 72px;
+}
+
+body {
+	background-color: #F0E68C;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+.hh {
+	display: flex;
+	justify-content: space-around;
+}
+
+p {
+	width: 300px;
+	text-align: center;
+	font-style: italic;
+}
+
+.animal_image {	
+	border: 1px dashed gray;
+	border-radius: 50px;
+	z-index: 1;
+}
+
+.description{
+	position: relative;
+	bottom: 300px;
+	z-index: -1;
+	border: 1px dashed gray;
+	border-radius: 50px;
+	margin-bottom: 25px;
+}
+
+.animal_image:hover {
+	box-shadow: 0px 0px 10px gray;
+	transition: 2s;
+}
+
+.animal_image:hover + .description{	
+	transform: translateY(315px);
+	box-shadow: 0px 0px 10px gray;
+	transition: 2s;
+}
+
+.side_menu {
+	background-color: palegreen;
+	border: 1px dashed gray;
+	box-shadow: 0px 0px 10px gray;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 50px; 
+	height: 200px;
+	width: 75px;
+}
+
+.social_media {
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+	margin: 12px 0px 0px 12px;
+}
+
+footer {
+	padding-top: 75px;
+	height: 150px;
+	background-image: linear-gradient(#F0E68C, palegreen)
+}
+
+.copyright {
+	color: green;
+	text-align: center;
+}
