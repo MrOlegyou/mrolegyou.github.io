@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.advertising{
+    height: 32px;
+    background-color: #44b26f;
+    text-align: center;
+}
+
+header{
+    height: 75px;
+    background-color: #221f1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+}
+
+.logo{    
+    height: 40px;
+}
+
+.catalog{
+    background-color: #4d4b4b;
+    width: 150px;
+    height: 38px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:white;
+}
