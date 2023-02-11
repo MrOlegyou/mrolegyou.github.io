@@ -1,0 +1,233 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Musey";
+}
+
+header {
+    background-color: chocolate;
+    text-align: center;
+    color: whitesmoke;   
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+@font-face {
+    font-family: Musey;
+    src: url("21063.otf");
+}
+
+main {
+    background-color: palegoldenrod;
+    padding: 100px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main div{
+    margin-bottom: 100px;
+}
+
+.mona_lisa{
+    height: 500px; 
+    border: 5px double brown;
+}
+
+.mona_lisa img {
+    height: 350px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 3px inset brown; 
+}
+
+.mona_lisa ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\231B";
+}
+
+.mone{
+    height: 500px;
+    border: 5px double brown; 
+}
+
+.mone img {
+    height: 350px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 3px inset brown;
+}
+
+.mone ul {
+    margin-left: 45px;    
+    margin-top: 20px;
+    list-style-type: "\1F30A";
+}
+
+.vilas {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.vilas img {
+    height: 350px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    border: 3px inset brown;
+}
+
+.vilas ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\1F451";
+}
+
+.vanGog {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.vanGog img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.vanGog ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\2728";
+}
+
+.yanV {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.yanV img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.yanV ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\26AA";
+}
+
+.malevych {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.malevych img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.malevych ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\2B1B";
+}
+
+.munk {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.munk img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.munk ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\1F3AD";
+}
+
+.daly {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.daly img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.daly ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\231A";
+}
+
+.greko {
+    height: 500px;
+    border: 5px double brown;
+}
+
+.greko img {
+    height: 350px;
+    border: 3px inset brown; 
+    margin-top: 30px;
+    margin-left: 30px;        
+    margin-right: 30px;
+}
+
+.greko ul {
+    margin-left: 45px;
+    margin-top: 20px;
+    list-style-type: "\2795";
+}
+
+main img:hover{
+    cursor: not-allowed;
+} 
+
+footer {
+    padding-top: 75px;
+    background-color: chocolate;
+    height: 175px;
+}
+
+.social{
+    height: 125px;  
+    width: 50%;
+    margin-left:25%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+a img{
+    height: 125px;
+}
+
+a{
+    text-decoration: none;
+}
+
