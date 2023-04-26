@@ -1,0 +1,15 @@
+img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+div{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
