@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div id="overlay"> </div>
+        <div id="game">
+            <h1>Ананасов собрано:</h1>
+            <h1 id="counter">0</h1>
+            <div id="plus_ananas" onclick="make_click_bigger()">
+                <b><span id="click_price_id" class="price">0</span></b>
+                <span id="click_text_id">+ Ананас за клик</span>
+                <b><span id="click_bonus_id" class="bonus">(0)</span></b>        
+            </div>
+            <div id="auto_ananas" onclick="make_auto_bigger()">
+                <b><span id="auto_price_id" class="price">0</span></b>
+                <span id="auto_text_id">+ Ананас автоматически</span>
+                <b><span id="auto_bonus_id" class="bonus">(0)</span></b>
+            </div>
+            <div id="super_ananas" onclick="make_super_bigger()">
+                <b><span id="super_price_id" class="price">0</span></b>
+                <span id="super_text_id"> + Ананас за супер-клик</span>
+                <b><span id="super_bonus_id" class="bonus">(0)</span></b>
+            </div>
+            <div id="main_button" onclick = "make_one_click()">🍍 ДОБАВИТЬ АНАНАС 🍍</div>
+            <div id="super_button" onclick = "make_super_click()">📦 ДОБАВИТЬ ЯЩИК 📦</div>
+        </div> 
+        <div id="rules">
+            <h1>Правила игры:</h1><br><br>
+            1. Добро пожаловать в игру-кликер, которая займёт ваше свободное время на ближайшие 1.000.000.000 ананасов. Игра довольно проста, необходимо совершать клики, параллельно покупая улучшения. Задачей игрока будет делать свой собственный выбор - продолжать кликать мышкой или же покупать улучшения для ускорения конца игры.<br><br>
+            2. В игре присутствуют два типа кликов. Первый - стандартный клик. Может нажиматься бесконечное количество раз, без задержек. Доступен для постоянного улучшения. Второй - клик-ящик, который автоматически прибавляет большое количество ананасов за раз. Такой клик также можно улучшать, однако нажимать его можно только с 30-секундной задержкой. Также присутствует система автоматического прироста ананасов.<br><br>
+            3. Система улучшений в игре похожа на известные аналоги. Каждое новое улучшение стоит чуть дороже предыдущего. Стоимость можно увидеть в левой части кнопки. Сам же бонус отображается справа. Учтите, что каждое улучшение тратит ваше количество ананасов. Будьте осторожны!<br><br>
+        </div> 
+    </body>
+</html>
+<script>
+    
+    var all_pineapples = 0;
+
+    document.getElementById("counter").innerHTML = all_pineapples;
+    
+    let click_price = 100;
+    let auto_price = 500;
+    let super_price = 250;
+    
+    var click_bonus = 1;
+    var auto_bonus = 0;
+    var super_bonus = 50;
+    
+    document.getElementById("click_price_id").innerHTML = click_price;
+    document.getElementById("click_bonus_id").innerHTML = "(" + click_bonus + ")";
+
+    document.getElementById("auto_price_id").innerHTML = auto_price;
+    document.getElementById("auto_bonus_id").innerHTML = "(" + auto_bonus + ")";
+
+    document.getElementById("super_price_id").innerHTML = super_price;
+    document.getElementById("super_bonus_id").innerHTML = "(" + super_bonus + ")";
+    
+    //------------------------------------------------------------------------------------
+    function make_one_click(){
+        all_pineapples = all_pineapples + click_bonus;
+        document.getElementById("counter").innerHTML = all_pineapples;
+        make_win();
+    }
+
+    function make_auto_ananas(){
+        all_pineapples = all_pineapples + auto_bonus;
+        document.getElementById("counter").innerHTML = all_pineapples;
+        make_win();
+    }
+    setInterval(make_auto_ananas, 1000);
+
+    function make_super_click(){
+        all_pineapples = all_pineapples + super_bonus;
+        document.getElementById("counter").innerHTML = all_pineapples;
+        document.getElementById("super_button").style.display = 'none';
+        make_win();
+        setTimeout(show_super_ananas, 60000);
+    }
+    function show_super_ananas() {
+        document.getElementById("super_button").style.display = 'block';
+    }
+    //------------------------------------------------------------------------------------
+
+    function make_click_bigger(){
+        if (all_pineapples >= click_price) {
+            all_pineapples = all_pineapples - click_price;
+            click_price = click_price * 2;
+            click_bonus = click_bonus + 1;
+            document.getElementById("counter").innerHTML = all_pineapples;
+            document.getElementById("click_price_id").innerHTML = click_price;
+            document.getElementById("click_bonus_id").innerHTML = "(" + click_bonus + ")";            
+        }  
+    }
+    
+    function make_auto_bigger(){
+        if (all_pineapples >= auto_price){            
+            all_pineapples = all_pineapples - auto_price;
+            auto_price = auto_price * 2;
+            auto_bonus = auto_bonus + 1;
+            document.getElementById("auto_price_id").innerHTML = auto_price;
+            document.getElementById("auto_bonus_id").innerHTML = "(" + auto_bonus + ")";
+        }
+    }
+
+    function make_super_bigger(){
+        if (all_pineapples >= super_price){
+            all_pineapples = all_pineapples - super_price;
+            super_price = super_price * 2;
+            super_bonus = super_bonus * 2;
+            document.getElementById("super_price_id").innerHTML = super_price;
+            document.getElementById("super_bonus_id").innerHTML = "(" + super_bonus + ")";
+        }
+    }
+
+    function make_win(){
+        if (all_pineapples == 1000000000){
+            all_pineapples = 0;
+            alert("Ура, победа! Но вы можете продолжать игру!");
+        }
+    }
+
+    //------------------------------------------------------------------------------------
+
+</script>
